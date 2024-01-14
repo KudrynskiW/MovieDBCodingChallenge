@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 class DetailsScreenViewModel {
     let coordinator: AppCoordinator
     let networkManager: NetworkManager

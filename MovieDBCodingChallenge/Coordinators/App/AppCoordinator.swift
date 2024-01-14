@@ -27,6 +27,8 @@ class AppCoordinator: AppCoordinatorProtocol {
     let networkManager = NetworkManager()
     
     func start() -> UINavigationController {
+        
+        self.navigationController.navigationBar.accessibilityIdentifier = "navBar"
         if let viewController = Bundle.main.loadNibNamed(Constants.mainScreenView, owner: nil, options: nil)?.first as? MainScreenViewController {
             viewController.viewModel = MainScreenViewModel(coordinator: self,
                                                            networkManager: networkManager)
@@ -47,10 +49,6 @@ class AppCoordinator: AppCoordinatorProtocol {
                                                                   movie: movie)
                 
             navigationController.pushViewController(viewController ?? UIViewController(), animated: true)
-            
-            
         }
     }
-    
-    
 }

@@ -14,15 +14,25 @@ class MovieCell: UITableViewCell {
         static let noBackdropPhoto = "xmark.rectangle"
     }
     
-    @IBOutlet weak var movieTitle: UILabel!
+    @IBOutlet weak var movieTitle: UILabel! {
+        didSet {
+            movieTitle.accessibilityIdentifier = "movieCell_title"
+        }
+    }
     @IBOutlet weak var movieOverview: UILabel!
     @IBOutlet weak var movieBackdrop: UIImageView!
-    @IBOutlet weak var addToFavourites: UIButton!
+    @IBOutlet weak var addToFavourites: UIButton! {
+        didSet {
+            addToFavourites.accessibilityIdentifier = "movieCell_addToFavourites"
+        }
+    }
     
     var movie: Movie?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.accessibilityIdentifier = "movieCell"
     }
     
     func setup() {

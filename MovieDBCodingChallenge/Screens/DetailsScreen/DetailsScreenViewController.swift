@@ -13,6 +13,11 @@ class DetailsScreenViewController: UIViewController {
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView! {
+        didSet{
+            scrollView.accessibilityIdentifier = "detailsScreen_scrollView"
+        }
+    }
     
     var viewModel: DetailsScreenViewModel?
     
@@ -20,15 +25,10 @@ class DetailsScreenViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"),
-                                                                 style: .done,
-                                                                 target: self,
-                                                                 action: #selector(close))
-        
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: viewModel?.movie.isFavourite ?? false ? "star.fill" : "star"),
-                                                                 style: .done,
-                                                                 target: self,
-                                                                 action: #selector(addToFavourites))
-        
+                                                                style: .done,
+                                                                target: self,
+                                                                action: #selector(close))
+        refreshFavouritesButton()
         setup()
     }
     
@@ -40,11 +40,7 @@ class DetailsScreenViewController: UIViewController {
     @objc
     private func addToFavourites() {
         viewModel?.movie.toggleFavourite()
-        
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: viewModel?.movie.isFavourite ?? false ? "star.fill" : "star"),
-                                                                 style: .done,
-                                                                 target: self,
-                                                                 action: #selector(addToFavourites))
+        refreshFavouritesButton()
     }
     
     private func setup() {
@@ -68,5 +64,15 @@ class DetailsScreenViewController: UIViewController {
         scoreLabel.text = String(format: "Score\n %0.2f", movie.voteAvg)
         // Duplicated it just to show ScrollView:
         overviewLabel.text = movie.overview + movie.overview + movie.overview + movie.overview + movie.overview + movie.overview + movie.overview
+    }
+    
+    private func refreshFavouritesButton() {
+        let addToFavouritesButton = UIBarButtonItem(image: UIImage(systemName: viewModel?.movie.isFavourite ?? false ? "star.fill" : "star"),
+                                                    style: .done,
+                                                    target: self,
+                                                    action: #selector(addToFavourites))
+        
+        addToFavouritesButton.accessibilityIdentifier = "detailsScreen_addToFavourites"
+        self.navigationItem.rightBarButtonItem = addToFavouritesButton
     }
 }

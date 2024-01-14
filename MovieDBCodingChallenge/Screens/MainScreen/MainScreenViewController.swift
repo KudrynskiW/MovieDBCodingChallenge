@@ -17,8 +17,17 @@ class MainScreenViewController: UIViewController {
         case search
     }
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.accessibilityIdentifier = "mainScreen_tableView"
+        }
+    }
+    @IBOutlet weak var searchBar: UISearchBar! {
+        didSet {
+            searchBar.accessibilityIdentifier = "mainScreen_searchBar"
+            searchBar.searchTextField.accessibilityIdentifier = "mainScreen_searchBar_searchTextField"
+        }
+    }
     
     var viewModel: MainScreenViewModel?
     var moviesList: [Movie] = []
@@ -26,21 +35,23 @@ class MainScreenViewController: UIViewController {
     var totalPages = 1
     var actualMode: Mode = .nowPlaying
     var searchQuery = ""
+    var firstFetch = true
     
     lazy var responseHandler: (Result<FetchMoviesResponse, NetworkManager.NetworkError>) -> Void = { [weak self] response in
+        guard let self else { return }
         switch response {
         case .success(let data):
-            if self?.currentPage == 1 {
-                self?.moviesList = data.results
+            if self.currentPage == 1 {
+                self.moviesList = data.results
             } else {
-                self?.moviesList.append(contentsOf: data.results)
+                self.moviesList = self.moviesList.isEmpty ? data.results : moviesList + data.results
             }
             
-            self?.totalPages = data.totalPages
+            self.totalPages = data.totalPages
             DispatchQueue.main.async {
-                self?.tableView.reloadData()
-                if self?.currentPage == 1 {
-                    self?.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+                self.tableView.reloadData()
+                if self.currentPage == 1 {
+                    self.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
                 }
             }
         case .failure(let err):
@@ -57,12 +68,10 @@ class MainScreenViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        fetchMovies()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
+        if firstFetch {
+            firstFetch.toggle()
+            fetchMovies()
+        }
         tableView.reloadData()
     }
     
