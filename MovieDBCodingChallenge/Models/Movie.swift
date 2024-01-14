@@ -49,6 +49,32 @@ struct Movie: Decodable {
         case voteCount = "vote_count"
     }
     
+    init(id: Int, 
+         title: String,
+         originalTitle: String,
+         overview: String,
+         popularity: Double,
+         originalLanguage: String,
+         isAdult: Bool,
+         posterPath: String,
+         backdropPath: String,
+         releaseDate: String,
+         voteAvg: Double,
+         voteCount: Int) {
+        self.id = id
+        self.title = title
+        self.originalTitle = originalTitle
+        self.overview = overview
+        self.popularity = popularity
+        self.originalLanguage = originalLanguage
+        self.isAdult = isAdult
+        self.posterPath = posterPath
+        self.backdropPath = backdropPath
+        self.releaseDate = releaseDate
+        self.voteAvg = voteAvg
+        self.voteCount = voteCount
+    }
+    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         

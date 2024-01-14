@@ -99,6 +99,7 @@
                 <outlet property="posterImage" destination="fBd-ny-45c" id="F46-Lb-DSJ"/>
                 <outlet property="releaseDateLabel" destination="env-B2-chH" id="cGR-cq-Fos"/>
                 <outlet property="scoreLabel" destination="Xnm-zl-sow" id="RCM-bP-B1b"/>
+                <outlet property="scrollView" destination="QnR-Lj-Ter" id="Nuf-39-dEV"/>
                 <outlet property="titleLabel" destination="DLc-Nx-2ZA" id="18D-Qn-6Wr"/>
             </connections>
             <point key="canvasLocation" x="-451.14503816793894" y="-625.35211267605632"/>

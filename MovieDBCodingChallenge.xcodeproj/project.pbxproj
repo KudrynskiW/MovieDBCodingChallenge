@@ -11,11 +11,15 @@
 		894FB9EF2B51AFAA00F88571 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FB9EE2B51AFAA00F88571 /* SceneDelegate.swift */; };
 		894FB9F62B51AFAB00F88571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 894FB9F52B51AFAB00F88571 /* Assets.xcassets */; };
 		894FB9F92B51AFAB00F88571 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894FB9F72B51AFAB00F88571 /* LaunchScreen.storyboard */; };
-		894FBA042B51AFAC00F88571 /* MovieDBCodingChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FBA032B51AFAC00F88571 /* MovieDBCodingChallengeTests.swift */; };
 		894FBA0E2B51AFAC00F88571 /* MovieDBCodingChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FBA0D2B51AFAC00F88571 /* MovieDBCodingChallengeUITests.swift */; };
 		894FBA102B51AFAC00F88571 /* MovieDBCodingChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FBA0F2B51AFAC00F88571 /* MovieDBCodingChallengeUITestsLaunchTests.swift */; };
 		89616FEE2B52B75A005E6DEC /* MainScreenViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89616FED2B52B75A005E6DEC /* MainScreenViewController+TableView.swift */; };
 		89616FF02B52B966005E6DEC /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89616FEF2B52B966005E6DEC /* SearchRequest.swift */; };
+		89616FF42B5412B0005E6DEC /* MainScreenViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89616FF32B5412B0005E6DEC /* MainScreenViewModelTests.swift */; };
+		89616FF72B5412EF005E6DEC /* AppCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89616FF62B5412EF005E6DEC /* AppCoordinatorMock.swift */; };
+		89616FF92B541372005E6DEC /* NetworkManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89616FF82B541372005E6DEC /* NetworkManagerMock.swift */; };
+		89616FFB2B5413FC005E6DEC /* MockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89616FFA2B5413FC005E6DEC /* MockManager.swift */; };
+		89616FFE2B5417C2005E6DEC /* DetailsScreenViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89616FFD2B5417C2005E6DEC /* DetailsScreenViewModelTests.swift */; };
 		8989E0AC2B52005A00CB0B32 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989E0AB2B52005A00CB0B32 /* AppCoordinator.swift */; };
 		8989E0AE2B5202DC00CB0B32 /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989E0AD2B5202DC00CB0B32 /* MainScreenViewModel.swift */; };
 		8989E0B32B52071E00CB0B32 /* DetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989E0B12B52071E00CB0B32 /* DetailsScreenViewController.swift */; };
@@ -58,12 +62,16 @@
 		894FB9F82B51AFAB00F88571 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		894FB9FA2B51AFAB00F88571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		894FB9FF2B51AFAC00F88571 /* MovieDBCodingChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieDBCodingChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		894FBA032B51AFAC00F88571 /* MovieDBCodingChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBCodingChallengeTests.swift; sourceTree = "<group>"; };
 		894FBA092B51AFAC00F88571 /* MovieDBCodingChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieDBCodingChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		894FBA0D2B51AFAC00F88571 /* MovieDBCodingChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBCodingChallengeUITests.swift; sourceTree = "<group>"; };
 		894FBA0F2B51AFAC00F88571 /* MovieDBCodingChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBCodingChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		89616FED2B52B75A005E6DEC /* MainScreenViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScreenViewController+TableView.swift"; sourceTree = "<group>"; };
 		89616FEF2B52B966005E6DEC /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
+		89616FF32B5412B0005E6DEC /* MainScreenViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModelTests.swift; sourceTree = "<group>"; };
+		89616FF62B5412EF005E6DEC /* AppCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorMock.swift; sourceTree = "<group>"; };
+		89616FF82B541372005E6DEC /* NetworkManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerMock.swift; sourceTree = "<group>"; };
+		89616FFA2B5413FC005E6DEC /* MockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockManager.swift; sourceTree = "<group>"; };
+		89616FFD2B5417C2005E6DEC /* DetailsScreenViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewModelTests.swift; sourceTree = "<group>"; };
 		8989E0AB2B52005A00CB0B32 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		8989E0AD2B5202DC00CB0B32 /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
 		8989E0B12B52071E00CB0B32 /* DetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewController.swift; sourceTree = "<group>"; };
@@ -144,7 +152,8 @@
 		894FBA022B51AFAC00F88571 /* MovieDBCodingChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				894FBA032B51AFAC00F88571 /* MovieDBCodingChallengeTests.swift */,
+				89616FF52B5412E5005E6DEC /* Mocks */,
+				89616FF12B54128D005E6DEC /* Screens */,
 			);
 			path = MovieDBCodingChallengeTests;
 			sourceTree = "<group>";
@@ -156,6 +165,41 @@
 				894FBA0F2B51AFAC00F88571 /* MovieDBCodingChallengeUITestsLaunchTests.swift */,
 			);
 			path = MovieDBCodingChallengeUITests;
+			sourceTree = "<group>";
+		};
+		89616FF12B54128D005E6DEC /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				89616FFC2B5417AD005E6DEC /* DetailsScreen */,
+				89616FF22B541295005E6DEC /* MainScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		89616FF22B541295005E6DEC /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				89616FF32B5412B0005E6DEC /* MainScreenViewModelTests.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		89616FF52B5412E5005E6DEC /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				89616FF62B5412EF005E6DEC /* AppCoordinatorMock.swift */,
+				89616FF82B541372005E6DEC /* NetworkManagerMock.swift */,
+				89616FFA2B5413FC005E6DEC /* MockManager.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		89616FFC2B5417AD005E6DEC /* DetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				89616FFD2B5417C2005E6DEC /* DetailsScreenViewModelTests.swift */,
+			);
+			path = DetailsScreen;
 			sourceTree = "<group>";
 		};
 		8989E0AA2B52004F00CB0B32 /* App */ = {
@@ -400,7 +444,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				894FBA042B51AFAC00F88571 /* MovieDBCodingChallengeTests.swift in Sources */,
+				89616FFB2B5413FC005E6DEC /* MockManager.swift in Sources */,
+				89616FF72B5412EF005E6DEC /* AppCoordinatorMock.swift in Sources */,
+				89616FF92B541372005E6DEC /* NetworkManagerMock.swift in Sources */,
+				89616FF42B5412B0005E6DEC /* MainScreenViewModelTests.swift in Sources */,
+				89616FFE2B5417C2005E6DEC /* DetailsScreenViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
